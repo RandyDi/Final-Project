@@ -18,11 +18,9 @@
     align-items: center;
 }
 
-#dogImages {
+#dogImages0,#dogImages1,#dogImages2,#dogImages3,#dogImages4 {
     height: 300px;
-    max-width: 200px;
-    width: fit-content;
-
+    max-width: 300px;
     padding: 10px;
     border: 1px solid black;
     border-radius: 50%;
