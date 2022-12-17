@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    border: 1px solid black;
+    border-radius: 1%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: rgb(225, 225, 225);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dogImages {
+    height: 300px;
+    max-width: 200px;
+    width: fit-content;
+
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.content-container p {
+    width: 60%;
+}
+
+.title-class {
+    font-size: x-large;
+    border-bottom: 1px solid black;
+}
+
+/* Bubble Effect */
+/* Credit https://www.youtube.com/watch?v=_K6ZcrK7xxY */
+.bubbleEffect {
+    display: inline-block;
+    animation: pop 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+@keyframes pop {
+    from {
+        opacity: 1;
+        transform: translateZ(0) scale(1.0, 1.0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateZ(0) scale(1.75, 1.75);
+    }
+}
+
+.content-container img {
+    height: 600px;
+    max-width: 600px;
+    border-radius: 50%;
+    margin: 2.5%;
+    border: 1px solid rgb(171, 171, 171);
+    padding: 10px;
+    background-color: rgb(83, 83, 83);
+}
+.buttons {
+    background-color: whitesmoke;
+    border: none;
+    padding: 16px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 15px;
+    border-radius: 10%;
+}
+.buttons:hover{
+    background-color: rgb(197, 197, 197);
+}
+.buttons:active{
+    background-color: rgb(133, 133, 133);
+}
+.searchBar{
+  padding: 10px;
+  border: none;
+  margin-top: 8px;
+  margin-right:16px;
+  margin-left: 5px;
+  font-size: 15px;
+}
+.searchBar:focus{
+    outline-style: solid;
+    outline-color: rgb(162, 160, 160) ;
+}
+.buttons-small {
+    background-color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 10px;
+    border-radius: 10%;
+}
+.buttons-small:hover{
+    background-color: rgb(197, 197, 197);
+}
+.buttons-small:active{
+    background-color: rgb(133, 133, 133);
+}
