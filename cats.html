@@ -15,11 +15,17 @@
         <a id="dogTab" class="tabs" href="./dogs.html">Dogs</a>
     </header>
     <div id="container-content" class="content-container">
-        <img id="catImage" src="" alt="Randomly Generated Cat">
         <p class="title-class">Cat Fact</p>
         <div class="fact-container" id="container-facts"></div>
         <button class="buttons" id="button-generate">Generate</button>
     </div>
+    <script>
+         var imageElement = document.createElement("img");
+        imageElement.setAttribute("id", "catImage");
+        imageElement.setAttribute("alt", "Randomly Generated Cat")
+        var divContainer = document.getElementById("container-content");
+        divContainer.prepend(imageElement);
+    </script>
     <script src="./js/catsAPI.js"></script>
 </body>
 </html>

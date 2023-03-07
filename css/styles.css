@@ -57,6 +57,9 @@ header {
   height: 300px;
   width: 300px;
   border-radius: 50%;
+  border: 3px solid black;
+  background-color: rgb(83, 83, 83);
+  padding: 10px;
 }
 .explaination-section{
   border: 2px solid rgb(117, 116, 116);

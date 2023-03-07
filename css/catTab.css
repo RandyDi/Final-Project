@@ -17,12 +17,12 @@
     align-items: center;
 }
 #catImage{
-    max-height: 600px;
-    max-width: 600px;
+    max-height: 400px;
+    max-width: 400px;
     width:fit-content;
     background-color: rgb(83, 83, 83);
     padding: 10px;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 50%;
 }
 .content-container p{

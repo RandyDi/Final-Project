@@ -2,6 +2,14 @@ var shibeOn = true;
 var search = false;
 var savedSearch = "";
 
+ // Adds image elemetns to the container-content Div
+ for(var number = 0; number < 5; number++){
+    var imageElement = document.createElement("img");
+    imageElement.setAttribute("id", "dogImages"+number);
+   var divContainer = document.getElementById("container-content");
+    divContainer.appendChild(imageElement);
+};
+
 // Adding Event Listeners to images
 document.getElementById("dogImages0").addEventListener("click", deleteImage);
 document.getElementById("dogImages1").addEventListener("click", deleteImage);
@@ -119,11 +127,14 @@ function deleteImage(event){
 }
 
 document.getElementById("response-Search").addEventListener("submit", function(event){
+event.preventDefault();
 shibeOn = false;
 search = true
 var breedName = document.getElementById("search-ID").value;
 savedSearch = breedName;
-event.preventDefault();
+savedSearch = savedSearch.replace(/\s+/g ,'/');
+savedSearch = savedSearch.toLowerCase();
+
         var xhttpImage2 = new XMLHttpRequest();
         xhttpImage2.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -135,6 +146,6 @@ event.preventDefault();
                 }
             }
         };
-        xhttpImage2.open("GET", "https://dog.ceo/api/breed/"+ breedName +"/images/random/5", true);
+        xhttpImage2.open("GET", "https://dog.ceo/api/breed/"+ savedSearch +"/images/random/5", true);
         xhttpImage2.send();
 });
